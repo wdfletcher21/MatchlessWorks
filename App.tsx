@@ -23,7 +23,7 @@ const App: React.FC = () => {
       {/* Header */}
       <header className="bg-slate-900 text-white pt-4 pb-5 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <img src="/MatchlessWorksMountainLogo.png" alt="MatchlessWorks Logo" className="mx-auto mb-5 h-40" />
+          <img src={`${import.meta.env.BASE_URL}MatchlessWorksMountainLogo.png`} alt="MatchlessWorks Logo" className="mx-auto mb-5 h-40" />
           <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-4 leading-tight">
             Support & Privacy
           </h1>

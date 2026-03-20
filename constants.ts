@@ -9,7 +9,7 @@ export const APPS: AppDetail[] = [
     usage: 'Progress remains on the device.',
     thirdParties: 'None.',
     description: 'Get calm, practical parenting help for behavior, sleep, and first aid—all in one simple app.',
-    image: '/GentleSteps.png'
+    image: `${import.meta.env.BASE_URL}GentleSteps.png`
   },
   {
     id: 'calmnow',
