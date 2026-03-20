@@ -3,6 +3,15 @@ import { AppDetail } from './types';
 
 export const APPS: AppDetail[] = [
   {
+    id: 'gentlesteps',
+    name: 'Gentle Steps',
+    dataCollection: 'No personal data collected.',
+    usage: 'Progress remains on the device.',
+    thirdParties: 'None.',
+    description: 'Get calm, practical parenting help for behavior, sleep, and first aid—all in one simple app.',
+    image: '/GentleSteps.png'
+  },
+  {
     id: 'calmnow',
     name: 'CalmNow',
     dataCollection: 'No personal data is collected.',
@@ -17,14 +26,6 @@ export const APPS: AppDetail[] = [
     usage: 'Self-help content accessed without accounts.',
     thirdParties: 'None.',
     description: 'Your companion for continuous self-improvement and growth.'
-  },
-  {
-    id: 'gentlesteps',
-    name: 'Gentle Steps',
-    dataCollection: 'No personal data collected.',
-    usage: 'Progress remains on the device.',
-    thirdParties: 'None.',
-    description: 'Habit tracking with a focus on sustainable, small changes.'
   },
   {
     id: 'wisdomroot',
@@ -70,7 +71,7 @@ General Privacy Policy:
 - Apps function without collecting personal data unless explicitly stated.
 - No personal data is stored, so no data deletion requests are needed.
 
-Contact Info: support@matchlessworks.com
+Contact Info: matchlessworks.com@gmail.com
 
 Guidelines:
 1. Be concise, professional, and friendly.
@@ -109,7 +110,7 @@ export const LEGAL_PRIVACY_POLICY = {
     },
     {
       title: "7. Contact Information",
-      content: "If you have questions about this Privacy Policy or our software practices, please contact our privacy officer at support@matchlessworks.com."
+      content: "If you have questions about this Privacy Policy or our software practices, please contact our privacy officer at matchlessworks.com@gmail.com."
     }
   ]
 };

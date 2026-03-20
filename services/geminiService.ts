@@ -18,6 +18,6 @@ export const getGeminiResponse = async (userPrompt: string) => {
     return response.text || "I'm sorry, I couldn't process that request.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "The AI assistant is temporarily unavailable. Please contact support@matchlessworks.com directly.";
+    return "The AI assistant is temporarily unavailable. Please contact matchlessworks.com@gmail.com directly.";
   }
 };

@@ -69,44 +69,31 @@ const App: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {APPS.map((app) => (
-              <div 
-                key={app.id} 
-                className="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center"
-              >
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{app.name}</h3>
-                
-                <div className="flex justify-center mb-4">
-                  <button 
-                    onClick={() => setSelectedApp(app)}
-                    className="w-16 h-16 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-blue-50 transition-colors hover:scale-105 transform duration-200 cursor-pointer"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400 group-hover:text-blue-600 transition-colors">
-                      <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path>
-                      <path d="M10 2c1 .5 2 2 2 5"></path>
-                    </svg>
-                  </button>
+              app.image ? (
+                <button
+                  key={app.id}
+                  onClick={() => setSelectedApp(app)}
+                  className="group relative rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden aspect-square cursor-pointer"
+                >
+                  <img src={app.image} alt={app.name} className="w-full h-full object-cover" />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-4 py-3 text-left">
+                    <h3 className="text-lg font-bold text-white">{app.name}</h3>
+                  </div>
+                </button>
+              ) : (
+                <div
+                  key={app.id}
+                  className="group relative rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden aspect-square bg-slate-100 flex items-center justify-center"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-2/5 h-2/5 text-slate-400">
+                    <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/>
+                    <path d="M10 2c1 .5 2 2 2 5"/>
+                  </svg>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent px-4 py-3 text-left">
+                    <h3 className="text-lg font-bold text-white">Coming Soon</h3>
+                  </div>
                 </div>
-                
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">
-                  {app.description}
-                </p>
-                
-                <div className="flex flex-col space-y-2">
-                  <a 
-                    href={`#${app.id}`} 
-                    className="text-blue-600 text-sm font-semibold hover:underline flex items-center justify-center gap-1"
-                  >
-                    Privacy Details 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                  </a>
-                  <a 
-                    href="mailto:support@matchlessworks.com" 
-                    className="text-slate-400 text-xs hover:text-slate-600 transition-colors text-center"
-                  >
-                    Contact App Support
-                  </a>
-                </div>
-              </div>
+              )
             ))}
           </div>
         </section>
@@ -169,7 +156,7 @@ const App: React.FC = () => {
                 Privacy
               </button>
               <a href="#" className="hover:text-blue-600 transition-colors">Terms</a>
-              <a href="mailto:support@matchlessworks.com" className="hover:text-blue-600 transition-colors">Email</a>
+              <a href="mailto:matchlessworks.com@gmail.com" className="hover:text-blue-600 transition-colors">Email</a>
             </div>
           </div>
         </div>
@@ -447,11 +434,15 @@ const App: React.FC = () => {
             {/* Modal Header */}
             <div className="p-6 border-b border-slate-100 flex justify-between items-center shrink-0">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
-                    <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path>
-                    <path d="M10 2c1 .5 2 2 2 5"></path>
-                  </svg>
+                <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center bg-blue-100">
+                  {selectedApp.image ? (
+                    <img src={selectedApp.image} alt={selectedApp.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+                      <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"></path>
+                      <path d="M10 2c1 .5 2 2 2 5"></path>
+                    </svg>
+                  )}
                 </div>
                 <div>
                   <h2 className="text-2xl font-bold text-slate-900">{selectedApp.name}</h2>
@@ -547,7 +538,7 @@ const App: React.FC = () => {
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
-                Contact Support
+                matchlessworks.com@gmail.com
               </a>
               <button 
                 onClick={() => setSelectedApp(null)}

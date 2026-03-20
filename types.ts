@@ -6,4 +6,5 @@ export interface AppDetail {
   usage: string;
   thirdParties: string;
   description: string;
+  image?: string;
 }
