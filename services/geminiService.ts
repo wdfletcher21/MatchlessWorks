@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from "../constants";
 
 export const getGeminiResponse = async (userPrompt: string) => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY || '' });
   
   try {
     const response = await ai.models.generateContent({
