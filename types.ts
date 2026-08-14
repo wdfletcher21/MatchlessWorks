@@ -2,6 +2,7 @@
 export interface AppDetail {
   id: string;
   name: string;
+  appStoreUrl?: string;
   iconPath: string;
   screenshotPaths?: string[];
   dataCollection: string;

@@ -1,9 +1,6 @@
 import React from 'react';
+import AppIcon from './AppIcon';
 import { APPS, getSupportEmailLink } from '../constants';
-
-const getAppStoreUrl = (appName: string) => {
-  return `https://apps.apple.com/us/search?term=${encodeURIComponent(appName)}`;
-};
 
 const getShortDescription = (description: string) => {
   const [firstSentence] = description.split(/(?<=[.!?])\s+/);
@@ -55,29 +52,31 @@ const AppDetailPage: React.FC = () => {
 
           <div className="mt-8 space-y-6">
             <div className="flex flex-row items-center justify-between gap-4">
-              <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-[28px] bg-slate-100 shadow-lg ring-1 ring-slate-200">
-                <div className="absolute inset-0 flex items-center justify-center bg-blue-50 text-3xl font-bold text-blue-600">
-                  {app.name.charAt(0)}
-                </div>
-                <img
-                  src={app.iconPath}
-                  alt={`${app.name} icon`}
-                  className="relative z-10 h-full w-full object-cover"
-                  onError={(event) => {
-                    event.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
+              <AppIcon
+                name={app.name}
+                iconPath={app.iconPath}
+                sizeClassName="h-28 w-28 rounded-xl shadow-lg"
+                preferDarkBackdrop={app.id === 'legacyman'}
+                imageClassName={app.id === 'legacyman' ? undefined : 'h-full w-full object-cover'}
+              />
 
               <div className="flex w-40 shrink-0 flex-col gap-2">
-                <a
-                  href={getAppStoreUrl(app.name)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-blue-700"
-                >
-                  View in App Store
-                </a>
+                {app.appStoreUrl ? (
+                  <a
+                    href={app.appStoreUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-blue-600 px-3 py-2 text-xs font-bold text-white transition-colors hover:bg-blue-700"
+                  >
+                    View in App Store
+                  </a>
+                ) : (
+                  <div
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-slate-100 px-3 py-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-500"
+                  >
+                    Coming Soon
+                  </div>
+                )}
                 <a
                   href={supportEmailLink}
                   target="_blank"

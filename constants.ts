@@ -22,6 +22,7 @@ export const APPS: AppDetail[] = [
   {
     id: 'stickembowfishingpro',
     name: 'Stickem Bowfishing Pro',
+    appStoreUrl: 'https://apps.apple.com/us/app/stickem-bowfishing-pro/id6773210663',
     iconPath: '/images/apps/Stickem.png',
     screenshotPaths: [
       '/images/apps/stickembowfishing 1.png',
@@ -52,6 +53,26 @@ export const APPS: AppDetail[] = [
     usage: 'Progress remains on the device.',
     thirdParties: 'None.',
     description: 'Parenting is a journey of thousands of little moments. Gentle Steps helps you make each one count—with trusted guidance, practical tools, and encouragement for every stage of early childhood.'
+  },
+  {
+    id: 'legacyman',
+    name: 'Legacy Man',
+    iconPath: '/images/apps/LegacyManLogo.png?v=20260812-legacy-1',
+    screenshotPaths: [],
+    dataCollection: 'No personal data collected.',
+    usage: 'App content is available without requiring an account.',
+    thirdParties: 'None.',
+    description: 'A character-building app focused on faith, purpose, and practical guidance for men pursuing a stronger legacy.'
+  },
+  {
+    id: 'simplysaid',
+    name: 'Simply Said',
+    iconPath: '/images/apps/SimplySaidLogo.png',
+    screenshotPaths: [],
+    dataCollection: 'No personal data collected.',
+    usage: 'App works without accounts or cloud syncing.',
+    thirdParties: 'None.',
+    description: 'A clean communication app built to help you express ideas clearly, simply, and with confidence.'
   },
   {
     id: 'calmnow',
