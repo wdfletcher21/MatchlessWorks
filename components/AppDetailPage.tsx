@@ -176,6 +176,19 @@ const AppDetailPage: React.FC = () => {
             </div>
           </div>
         </section>
+        {app.multiplayerPrivacy && (
+          <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Multiplayer Privacy</p>
+              <h2 className="mt-2 text-2xl font-bold text-slate-900">Match Privacy Details</h2>
+            </div>
+            <div className="mt-4">
+              <p className="text-slate-600 leading-relaxed text-[15px]">
+                {app.multiplayerPrivacy}
+              </p>
+            </div>
+          </section>
+        )}
       </main>
     </div>
   );

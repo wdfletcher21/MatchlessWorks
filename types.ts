@@ -8,6 +8,7 @@ export interface AppDetail {
   dataCollection: string;
   usage: string;
   thirdParties: string;
+  multiplayerPrivacy?: string;
   description: string;
 }
 

@@ -25,15 +25,58 @@ export const APPS: AppDetail[] = [
     appStoreUrl: 'https://apps.apple.com/us/app/stickem-bowfishing-pro/id6773210663',
     iconPath: '/images/apps/Stickem.png',
     screenshotPaths: [
-      '/images/apps/stickembowfishing 1.png',
+      '/images/apps/Stickem1.png',
+      '/images/apps/Stickem 3.png',
       '/images/apps/stickembowfishing 2.png',
-      '/images/apps/stickembowfishing 3.png',
-      '/images/apps/stickembowfishing 4.png',
-      '/images/apps/stickembowfishing 5.png',
+      '/images/apps/Stickem9.png',
+      '/images/apps/Stickem5.png',
+      '/images/apps/Stickem7.png',
+      '/images/apps/Stickem8.png',
+      '/images/apps/Stickem4.png',
+      '/images/apps/Stickem6.png',
     ],
-    dataCollection: 'No personal data collected.',
-    usage: 'App provides bowfishing tools and reference features without requiring user accounts.',
-    thirdParties: 'None.',
+    dataCollection: `STICKem Bowfishing does not require users to provide a legal name, email address, telephone number, physical address, or social-media account. The app may collect or process the following information:
+
+  - A randomly generated player identifier and an anonymous authentication identifier.
+  - A user-selected Hunter Tag. Users should not include their real name or other personal information in their Hunter Tag.
+  - Gameplay information, including scores, catches, shots, accuracy, game progress, virtual currency, equipment, and leaderboard results.
+  - Head-to-head match information, including room codes, participant identifiers, Hunter Tags, readiness and connection status, scores, match results, and timestamps.
+  - Safety information submitted through the reporting and blocking features, including the accounts involved and the selected report reason.
+  - In-app purchase information, including products purchased, entitlement status, transaction status, and purchase-restoration information.
+  - Technical information that may be processed automatically when the app communicates with our service providers, such as IP address, device type, operating system, application version, network status, request timestamps, and service diagnostic information.
+
+  Some game progress, preferences, upgrades, and local score history are stored directly on the user’s device. Information used for leaderboards, multiplayer matches, reports, blocks, purchases, and online services may be processed or stored remotely.
+
+  STICKem Bowfishing does not intentionally collect precise location, contacts, photographs, camera recordings, microphone recordings, health information, or financial-account credentials. Payment-card information is processed by Apple and is not provided directly to us.
+
+  We do not sell personal information. We do not use collected information for cross-app advertising or tracking.`,
+    usage: `We use the information described above to:
+
+  - Create and maintain an anonymous player session.
+  - Save game progress and preferences.
+  - Operate local and global leaderboards.
+  - Create, join, synchronize, and complete private head-to-head matches.
+  - Display Hunter Tags, scores, and match results to other participants.
+  - Detect lost connections, restore multiplayer sessions, and finalize interrupted matches.
+  - Fulfill, verify, and restore in-app purchases.
+  - Generate fish lore and other game content.
+  - Respond to support requests.
+  - Review reports, enforce community and safety rules, prevent blocked players from joining one another’s matches, investigate abuse, and protect users and the service.
+  - Diagnose technical problems, maintain security, prevent fraud, and improve reliability.
+
+  Hunter Tags and leaderboard results may be visible to other users. During a head-to-head match, each participant can see the other participant’s Hunter Tag, connection status, live score, and final result.
+
+  We retain information only for as long as reasonably necessary to provide the applicable feature, maintain security, resolve disputes, satisfy legal obligations, and enforce our rules. Safety reports and blocking relationships may be retained longer than ordinary gameplay records when reasonably necessary to investigate abuse or prevent repeated unwanted interactions.
+
+  Users may contact us at matchlessworks.com@gmail.com with privacy questions or requests concerning their information. Because the app uses anonymous identifiers, we may need information such as a Hunter Tag, match code, purchase record, or device-generated identifier to locate the relevant records.`,
+    thirdParties: `We use service providers to operate specific portions of STICKem Bowfishing:
+
+  - Supabase provides anonymous authentication, database storage, server functions, leaderboards, multiplayer synchronization, and safety records. Supabase generally processes application end-user data as customer data on our behalf. https://supabase.com/privacy
+  - RevenueCat manages in-app purchase products, purchase history, entitlement status, and purchase restoration. RevenueCat may process an anonymous App User ID, transaction information, device and operating-system information, IP address, inferred IP-based location, and service timestamps. RevenueCat states that its SDK collects purchase history and can generate an anonymous identifier when an app does not supply its own identity. https://www.revenuecat.com/privacy-policy https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy
+  - Apple provides App Store distribution, StoreKit payment processing, purchase authorization, transaction records, restoration, and fraud prevention. Apple processes payment and Apple Account information under its own privacy policy. We do not receive the user’s complete payment-card information. https://www.apple.com/legal/privacy/
+  - Google Gemini API generates fish lore. The app currently sends game-related prompts, such as a fish type, rather than Hunter Tags, multiplayer records, or contact information. Google may process prompts, generated responses, technical usage information, and security-monitoring information under the applicable Gemini API terms. Google’s treatment of prompts may differ depending on whether the API is used as a paid or unpaid service. https://ai.google.dev/gemini-api/terms https://ai.google.dev/gemini-api/docs/zdr
+
+  These providers may process information in countries other than the user’s country and apply their own security, retention, and legal-compliance practices. We share information with each provider only as reasonably necessary to operate the relevant feature.`,
     description: 'Experience the adrenaline of this bowfishing game—take aim, release, and land the biggest catches in Stickem Bowfishing Pro.'
   },
   {
@@ -193,6 +236,7 @@ export const LEGAL_PRIVACY_POLICY: LegalDocument = {
       title: "6. Data Retention and Deletion",
       content: "Since no user data is stored on our servers, we have no data to delete upon request. To delete your local data, simply uninstall the application from your device. This will remove all associated sandboxed data stored by the OS."
     },
+    
     {
       title: "7. Contact Information",
       content: "If you have questions about this Privacy Policy or our software practices, please contact our privacy officer at matchlessworks.com@gmail.com."
