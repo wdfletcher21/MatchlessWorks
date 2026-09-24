@@ -210,7 +210,8 @@ export const LEGAL_PRIVACY_POLICY: LegalDocument = {
   title: 'Official Privacy Policy',
   summary: 'This page contains the full legal privacy policy governing MatchlessWorks applications and related support experiences.',
   version: "2026.1.1",
-  lastUpdated: "January 24, 2026",
+  version: "2026.2.0",
+  lastUpdated: "September 24, 2026",
   sections: [
     {
       title: "1. Introduction",
