@@ -66,7 +66,7 @@ export const APPS: AppDetail[] = [
 
   Hunter Tags and leaderboard results may be visible to other users. During a head-to-head match, each participant can see the other participant’s Hunter Tag, connection status, live score, and final result.
 
-  We retain information only for as long as reasonably necessary to provide the applicable feature, maintain security, resolve disputes, satisfy legal obligations, and enforce our rules. Safety reports and blocking relationships may be retained longer than ordinary gameplay records when reasonably necessary to investigate abuse or prevent repeated unwanted interactions.
+  Ordinary duel and participant records are retained for 90 days. Safety reports and moderation decisions are retained for up to two years. User-created block relationships remain until the associated anonymous account is deleted, and temporary multiplayer bans are removed after expiration. Leaderboard and purchase records may be retained while needed to provide those features, restore purchases, prevent fraud, resolve disputes, comply with legal obligations, and enforce our rules.
 
   Users may contact us at matchlessworks.com@gmail.com with privacy questions or requests concerning their information. Because the app uses anonymous identifiers, we may need information such as a Hunter Tag, match code, purchase record, or device-generated identifier to locate the relevant records.`,
     thirdParties: `We use service providers to operate specific portions of STICKem Bowfishing:
@@ -193,54 +193,53 @@ App: ${app.name}
 `).join('\n')}
 
 General Privacy Policy:
-- MatchlessWorks respects privacy. 
-- Apps function without collecting personal data unless explicitly stated.
-- No personal data is stored, so no data deletion requests are needed.
+- MatchlessWorks respects privacy and limits data handling to what each app's disclosed features require.
+- Some apps operate entirely on-device, while others may use online services and store limited data remotely.
+- Privacy and deletion answers must reflect the specific app information above; never claim that every MatchlessWorks app is entirely on-device or has no remotely stored data.
 
 Contact Info: matchlessworks.com@gmail.com
 
 Guidelines:
 1. Be concise, professional, and friendly.
 2. If a user asks about a specific app, refer to the data above.
-3. Emphasize that no data is collected and everything happens on-device.
-4. If asked about data deletion, explain that since no data is stored, no deletion is necessary.
+3. Distinguish between locally stored data and information processed by online services.
+4. For deletion questions, explain the app-specific options and direct users to matchlessworks.com@gmail.com when remotely stored information may be involved.
 `;
 
 export const LEGAL_PRIVACY_POLICY: LegalDocument = {
   title: 'Official Privacy Policy',
   summary: 'This page contains the full legal privacy policy governing MatchlessWorks applications and related support experiences.',
-  version: "2026.1.1",
-  version: "2026.2.0",
-  lastUpdated: "September 24, 2026",
+  version: '2026.3.1',
+  lastUpdated: 'September 25, 2026',
   sections: [
     {
       title: "1. Introduction",
       content: "This Privacy Policy describes how MatchlessWorks ('we', 'us', or 'our') handles information in relation to our mobile applications available on the Apple App Store. We take your privacy seriously and have designed our apps to function with a 'Privacy-First' architecture."
     },
     {
-      title: "2. Information We Do Not Collect",
-      content: "MatchlessWorks does not collect, store, or transmit any Personal Identifiable Information (PII). This includes, but is not limited to: names, email addresses, physical addresses, phone numbers, precise location data, or device identifiers (IDFA/IDFV). Our apps do not require user accounts to function."
+      title: '2. Information We Collect',
+      content: "The information handled by MatchlessWorks depends on the application, its features, and the choices a user makes. Some applications operate entirely on the user's device, while others may use online services. Depending on the app, information may include account or anonymous identifiers, user-selected display names, app activity and progress, user-generated content, multiplayer or shared-feature activity, support and safety communications, purchase and entitlement information, and technical service information such as device type, operating system, application version, network address, request time, and diagnostic details. Each application's page identifies the categories relevant to that app. We do not sell personal information and do not use personal information for cross-app advertising or tracking unless an app-specific notice expressly states otherwise and any legally required consent has been obtained."
     },
     {
-      title: "3. Local Data Processing",
-      content: "All data created or processed by our applications (such as meditation logs, habit progress, or runner statistics) is stored locally on your device's internal storage. We do not maintain any cloud databases or servers that hold user-generated content. Your data remains in your control at all times."
+      title: '3. Local and Online Data Processing',
+      content: "An application may store preferences, progress, content, and other feature data locally on a user's device. Apps that provide online, shared, account-based, purchase, artificial-intelligence, support, or safety features may transmit and store the information reasonably necessary to provide and protect those features. The applicable app-specific privacy statement explains whether information remains on-device, is processed remotely, or both."
     },
     {
       title: "4. Third-Party Services",
-      content: "Our applications do not integrate with third-party data brokers, analytics providers that track individual users, or advertising networks. We may use native OS-level frameworks (e.g., Apple HealthKit or CoreMotion) only where explicitly requested by the user to provide core app functionality; such data never leaves your device via our software."
+      content: "MatchlessWorks applications may use third-party service providers when necessary for an application's disclosed features. These may include app-store and payment providers, hosting and database providers, authentication services, purchase-management services, artificial-intelligence services, analytics or diagnostics providers, and customer-support or safety tools. Providers process information under their own terms and privacy practices and may process information in countries other than the user's country. Each app-specific statement identifies the providers used by that app and their purposes. Payment-card details are generally processed by the applicable app store or payment provider and are not provided directly to MatchlessWorks."
     },
     {
       title: "5. Children's Privacy",
-      content: "Because our applications do not collect any personal information from any users, they are safe for children and comply with the Children's Online Privacy Protection Act (COPPA). We do not knowingly target or track children."
+      content: "Our applications are not directed to children unless an app-specific listing expressly states otherwise. We do not knowingly collect personal information from children in a manner prohibited by applicable law. Online identifiers, display names, app activity, user-generated content, shared-feature records, and purchase information may constitute personal information under some laws even when a legal name or email address is not requested. Parents or guardians who believe a child has provided personal information may contact matchlessworks.com@gmail.com so that we can investigate and, where appropriate, delete or restrict the information."
     },
     {
       title: "6. Data Retention and Deletion",
-      content: "Since no user data is stored on our servers, we have no data to delete upon request. To delete your local data, simply uninstall the application from your device. This will remove all associated sandboxed data stored by the OS."
+      content: "We retain information only for as long as reasonably necessary to provide the relevant feature, maintain security, prevent fraud, resolve disputes, comply with legal obligations, and enforce our agreements. Retention periods vary by app and data category and are described in the applicable app-specific statement. Uninstalling an app generally removes its locally stored sandboxed data, although information stored in device backups or managed by the operating system may remain subject to those systems' settings. Users may request help with remotely stored information by contacting matchlessworks.com@gmail.com and providing the app name plus enough information to locate and verify the relevant record. We may be unable to associate a request with records that use only anonymous identifiers unless the requester can provide the applicable identifier or matching record details."
     },
     
     {
       title: "7. Contact Information",
-      content: "If you have questions about this Privacy Policy or our software practices, please contact our privacy officer at matchlessworks.com@gmail.com."
+      content: 'Privacy, safety, moderation, and deletion requests may be sent to matchlessworks.com@gmail.com.'
     }
   ],
   acknowledgment: 'By using MatchlessWorks applications, you acknowledge that you have read and understood this Privacy Policy.'
@@ -461,28 +460,32 @@ export const LEGAL_TERMS_OF_USE: LegalDocument = {
 
 export const LEGAL_DATA_DELETION_POLICY: LegalDocument = {
   title: 'Data Deletion Policy',
-  summary: 'This page explains how MatchlessWorks handles deletion requests and what steps users can take to remove any locally stored app data.',
-  version: '2026.1.0',
-  lastUpdated: 'July 1, 2026',
+  summary: 'This page explains how MatchlessWorks handles deletion requests for local and remotely stored application data.',
+  version: '2026.2.1',
+  lastUpdated: 'September 25, 2026',
   sections: [
     {
-      title: '1. Server-Side Data',
-      content: 'MatchlessWorks does not maintain cloud accounts or server-side databases containing personal user data for the apps listed on this site. As a result, there is generally no account record or hosted personal profile for us to delete.'
+      title: '1. Application-Specific Data',
+      content: "Data practices differ among MatchlessWorks applications. Some apps store data only on the user's device, while others use online services for features such as accounts, synchronization, shared experiences, purchases, support, safety, or generated content. Review the relevant application's privacy statement to learn what it processes and where that information is stored."
     },
     {
       title: '2. Local Device Data',
-      content: 'Any progress, preferences, or content created while using our apps is stored locally on your device. You remain in control of that information because it is not transferred to MatchlessWorks-operated servers.'
+      content: 'Preferences, progress, content, and other feature data may be stored locally on your device. Uninstalling the relevant application generally removes its sandboxed local storage and associated local files, although information in device backups or managed by the operating system may remain subject to those systems and settings.'
     },
     {
-      title: '3. How to Delete Local Data',
+      title: '3. Remotely Stored Data and Retention',
+      content: "Apps with online features may store limited information with MatchlessWorks or its service providers. We retain that information only for as long as reasonably necessary to provide the feature, maintain security, prevent fraud, resolve disputes, comply with legal obligations, and enforce our agreements. App-specific privacy statements describe applicable categories and retention periods."
+    },
+    {
+      title: '4. Requesting Deletion of Remote Data',
+      content: 'Contact matchlessworks.com@gmail.com with the app name and enough information to locate and verify the relevant record, such as an account address, display name, purchase record, transaction reference, or app-generated identifier. We may be unable to associate a request with records that use only anonymous identifiers unless the requester can provide the applicable identifier or matching record details. We may also retain limited information where required for security, fraud prevention, dispute resolution, or legal compliance.'
+    },
+    {
+      title: '5. How to Delete Local Data',
       content: 'To remove locally stored app data, uninstall the relevant application from your device. On most operating systems, uninstalling the app removes its sandboxed storage and associated local files.'
     },
     {
-      title: '4. Special Requests',
-      content: 'If you believe a MatchlessWorks product has handled data in a way that is inconsistent with this policy, contact matchlessworks.com@gmail.com with the app name, device platform, and a description of the issue so we can investigate.'
-    },
-    {
-      title: '5. Policy Updates',
+      title: '6. Policy Updates',
       content: 'We may revise this Data Deletion Policy when product behavior or legal requirements change. The latest version will always be published on this page.'
     }
   ],
