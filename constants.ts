@@ -92,9 +92,30 @@ export const APPS: AppDetail[] = [
       '/images/apps/Gentlesteps 6.png',
       '/images/apps/Gentlesteps 7.png',
     ],
-    dataCollection: 'No personal data collected.',
-    usage: 'Progress remains on the device.',
-    thirdParties: 'None.',
+    dataCollection: `Gentle Steps does not require an account and does not ask users to provide an email address, telephone number, physical address, precise location, contacts, or advertising identifier.
+
+  Parents and caregivers may enter a parent name, a child's name or nickname, age or date of birth, sleep information, behavior notes, potty-training progress, preferences, and other parenting-related content. This information is stored locally on the user's device and is not uploaded to MatchlessWorks servers.
+
+  To provide and restore the one-time Lifetime Access purchase, RevenueCat may process an anonymous App User ID, product and transaction information, entitlement status, device and operating-system information, IP address, inferred IP-based location, and service timestamps. Apple processes payment and Apple Account information. MatchlessWorks does not receive the user's complete payment-card information.
+
+  If crash diagnostics are enabled, Sentry may process crash reports, stack traces, application version, device model, operating-system version, timestamps, and related technical diagnostic information. We do not intentionally include parent or child profile content in crash reports.
+
+  The current iOS release uses locally generated fallback content and does not send parenting prompts or profile information to Google Gemini. If an online Gemini-powered feature is enabled in a future release, we will update this notice and the applicable App Store privacy disclosures before release.
+
+  We do not sell personal information, use it for cross-app advertising, or track users across other companies' apps or websites.`,
+    usage: `We use locally stored information to personalize the app, display age-appropriate parenting guidance, maintain sleep and behavior records, remember preferences, and preserve the user's complimentary-preview status.
+
+  RevenueCat information is used only to display products, complete and verify the Lifetime Access purchase, maintain entitlement status, prevent purchase fraud, and restore purchases. Sentry diagnostic information, when enabled, is used to identify crashes, troubleshoot technical problems, and improve app reliability.
+
+  Local profile and activity information remains on the device until the user deletes it in the app or removes the app. RevenueCat, Apple, and Sentry retain information under their own policies and legal obligations. Privacy questions and requests may be sent to matchlessworks.com@gmail.com.`,
+    thirdParties: `Gentle Steps uses or includes the following service providers:
+
+  - RevenueCat manages the Lifetime Access product, anonymous purchase status, entitlement verification, and purchase restoration. https://www.revenuecat.com/privacy-policy/ https://www.revenuecat.com/docs/platform-resources/apple-platform-resources/apple-app-privacy
+  - Apple provides App Store distribution, StoreKit payment processing, purchase authorization, transaction records, restoration, and fraud prevention. https://www.apple.com/legal/privacy/
+  - Sentry provides crash and technical diagnostic reporting when diagnostics are enabled. Sentry may process device, application, crash, and network-related technical information. https://sentry.io/privacy/
+  - Google Gemini is included only as an inactive/local-fallback integration in the current iOS release. The current release does not transmit Gentle Steps prompts or profile information to Gemini. If online Gemini processing is enabled later, its purpose, transmitted data, and applicable Google terms will be disclosed before release. https://ai.google.dev/gemini-api/terms
+
+  These providers may process information in countries other than the user's country and apply their own security, retention, and legal-compliance practices. We share information only as reasonably necessary to operate the applicable feature.`,
     description: 'Parenting is a journey of thousands of little moments. Gentle Steps helps you make each one count—with trusted guidance, practical tools, and encouragement for every stage of early childhood.'
   },
   {
@@ -209,8 +230,8 @@ Guidelines:
 export const LEGAL_PRIVACY_POLICY: LegalDocument = {
   title: 'Official Privacy Policy',
   summary: 'This page contains the full legal privacy policy governing MatchlessWorks applications and related support experiences.',
-  version: '2026.3.1',
-  lastUpdated: 'September 25, 2026',
+  version: "2026.3.2",
+  lastUpdated: "October 5, 2026",
   sections: [
     {
       title: "1. Introduction",
