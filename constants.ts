@@ -20,6 +20,16 @@ export const SUPPORT_EMAIL_LINK = getSupportEmailLink('MatchlessWorks Support Re
 
 export const APPS: AppDetail[] = [
   {
+    id: 'rootedandrising',
+    name: 'Rooted & Rising',
+    iconPath: '/images/apps/RootedAndRising.png',
+    screenshotPaths: [],
+    dataCollection: 'Reflections, goals, journal entries, preferences, and limited event history are stored locally. AI conversation messages are sent securely for response generation.',
+    usage: 'Information is used to provide optional AI-guided conversations, manage subscriptions, restore purchases, respond to support, and protect service reliability.',
+    thirdParties: 'Apple processes purchases, RevenueCat manages subscription status, and Google Gemini processes optional AI-guided conversations.',
+    description: 'A thoughtful, faith-based space for reflection, personal growth, practical topic guides, and optional AI-guided conversations.'
+  },
+  {
     id: 'stickembowfishingpro',
     name: 'Stickem Bowfishing Pro',
     appStoreUrl: 'https://apps.apple.com/us/app/stickem-bowfishing-pro/id6773210663',
