@@ -5,9 +5,11 @@ export interface AppDetail {
   appStoreUrl?: string;
   iconPath: string;
   screenshotPaths?: string[];
+  privacySummary?: string;
   dataCollection: string;
   usage: string;
   thirdParties: string;
+  appSpecificTerms?: string;
   multiplayerPrivacy?: string;
   description: string;
 }

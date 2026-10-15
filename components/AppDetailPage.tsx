@@ -148,7 +148,7 @@ const AppDetailPage: React.FC = () => {
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
             <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-slate-400">Privacy</p>
-            <p className="mt-2 text-lg font-bold text-slate-900">{app.dataCollection}</p>
+            <p className="mt-2 text-lg font-bold text-slate-900">{app.privacySummary ?? app.dataCollection}</p>
             <p className="mt-1 text-sm text-slate-500">Minimal data footprint</p>
           </div>
         </section>
@@ -164,18 +164,33 @@ const AppDetailPage: React.FC = () => {
           <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Data Collection</span>
-              <p className="mt-3 font-semibold leading-relaxed text-slate-900">{app.dataCollection}</p>
+              <p className="mt-3 whitespace-pre-line font-semibold leading-relaxed text-slate-900">{app.dataCollection}</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Usage Context</span>
-              <p className="mt-3 font-semibold leading-relaxed text-slate-900">{app.usage}</p>
+              <p className="mt-3 whitespace-pre-line font-semibold leading-relaxed text-slate-900">{app.usage}</p>
             </div>
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
               <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Third Parties</span>
-              <p className="mt-3 font-semibold leading-relaxed text-slate-900">{app.thirdParties}</p>
+              <p className="mt-3 whitespace-pre-line font-semibold leading-relaxed text-slate-900">{app.thirdParties}</p>
             </div>
           </div>
         </section>
+        {app.appSpecificTerms && (
+          <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-400">Tempo Run Terms</p>
+              <h2 className="mt-2 text-2xl font-bold text-slate-900">Fitness, Music & Sharing Provisions</h2>
+            </div>
+            <p className="mt-5 whitespace-pre-line text-[15px] leading-relaxed text-slate-600">
+              {app.appSpecificTerms}
+            </p>
+            <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold">
+              <a href="/privacy.html" className="text-blue-600 transition-colors hover:text-blue-700">General Privacy Policy →</a>
+              <a href="/terms.html" className="text-blue-600 transition-colors hover:text-blue-700">General Terms of Use →</a>
+            </div>
+          </section>
+        )}
         {app.multiplayerPrivacy && (
           <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
             <div>

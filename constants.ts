@@ -191,12 +191,43 @@ export const APPS: AppDetail[] = [
   {
     id: 'temporun',
     name: 'Tempo Run',
-    iconPath: '/images/apps/TempoRunLogo.png',
+    iconPath: '/images/apps/TempoRun.png?v=20261015',
     screenshotPaths: [],
-    dataCollection: 'No personal data collected.',
-    usage: 'App runs without tracking or accounts.',
-    thirdParties: 'None.',
-    description: 'Rhythm-based running companion for optimal pacing.'
+    privacySummary: 'Location is used during active runs; run history stays on your device.',
+    dataCollection: `Tempo Run does not require a MatchlessWorks account and does not ask for a legal name, telephone number, physical address, contacts, photographs, microphone access, health records, or advertising identifier.
+
+  When a user sets up a run, the app stores running pace, height, unit preference, music-service choice, and genre preferences locally on the device. During an active run, the app uses foreground precise location to display the runner on a map and calculate the route, distance, speed, and pace. Completed-run information—including date, duration, distance, pace, route coordinates, cadence, music provider, and personal-record results—is stored locally on the device. MatchlessWorks does not receive or store the user's route through the Tempo Run playlist service.
+
+  If a user connects Spotify, Spotify authenticates the account and provides authorization tokens. Those tokens are stored in the device's secure storage. Tempo Run uses the permissions granted by the user to search Spotify's catalog, create a private playlist in the user's Spotify account, identify the currently playing track, and pause playback when a run ends. Depending on the permissions displayed during authorization, Spotify may also make limited account information available to the app. Tempo Run does not store the user's Spotify password.
+
+  To generate music suggestions, Tempo Run sends the target cadence in beats per minute and the user's selected genre preferences to the Tempo Run playlist service. The service sends a music-generation prompt containing those details to Google Gemini. It does not send the user's name, height, entered pace, run history, or route coordinates to Gemini. The hosting provider may process an IP address, request time, and ordinary network or security logs when a request is made.
+
+  Sharing a completed run is optional and user-initiated through the iOS share sheet. Shared text includes run results and achievements but does not include the saved route coordinates. The app or recipient selected by the user handles the shared content under its own privacy practices.
+
+  Tempo Run does not sell personal information, use information for cross-app advertising, or track users across other companies' apps or websites.`,
+    usage: `Location and run information are used to map an active run, calculate running statistics, preserve run history, and identify personal records. Pace, height, units, music choice, and genre preferences are used to estimate cadence and personalize future playlists.
+
+  Locally stored preferences and run history remain on the device until the user deletes an individual run, clears applicable settings, or removes the app. Spotify authorization tokens remain in secure device storage until the user disconnects Spotify or removes the app. Disconnecting inside Tempo Run removes the locally stored tokens; users can separately revoke Tempo Run's access from their Spotify account settings. Playlists created in Spotify remain in the user's Spotify account until the user deletes them there.
+
+  The playlist service uses an IP address in short-lived in-memory rate limiting and may generate ordinary operational logs. MatchlessWorks does not use those requests to build advertising profiles. Google, Spotify, Railway, Apple, and any sharing destination apply their own retention and legal obligations.
+
+  Users can deny location permission, but live run mapping, distance, and pace features will not function. Privacy questions may be sent to matchlessworks.com@gmail.com. Last updated October 15, 2026.`,
+    thirdParties: `Tempo Run uses the following services for disclosed features:
+
+  - Apple provides iOS location services, MapKit mapping, the system share sheet, secure device capabilities, and App Store distribution. https://www.apple.com/legal/privacy/
+  - Spotify provides optional account authorization, music search, private-playlist creation, currently-playing information, and playback control. Spotify processes information under its own privacy policy and platform terms. https://www.spotify.com/legal/privacy-policy/ https://developer.spotify.com/terms
+  - Google Gemini generates song suggestions from target BPM and genre preferences. Google may process prompts, responses, and technical service information under the applicable Gemini API terms and privacy documentation. https://ai.google.dev/gemini-api/terms
+  - Railway hosts the Tempo Run playlist service and may process IP addresses, request metadata, security information, and operational logs as part of providing infrastructure. https://railway.com/legal/privacy
+
+  These providers may process information in countries other than the user's country. Tempo Run sends each provider only the information needed for the applicable feature.`,
+    appSpecificTerms: `Tempo Run is a fitness and entertainment aid, not a medical device or a substitute for medical advice. Cadence, pace, distance, route, personal-record, and other calculations are estimates and may be affected by GPS availability, device sensors, terrain, signal conditions, and user input. Users are responsible for choosing a safe route, remaining aware of traffic and surroundings, following local laws, and stopping exercise if they feel unwell. Consult a qualified health professional before beginning or changing an exercise program when appropriate.
+
+  Music features require a compatible third-party music account, internet access, and any subscription level required by that provider. Music availability, playback, playlists, and account access are controlled by the music provider and may change or become unavailable. Users must comply with the provider's terms and may use music only as permitted by the applicable service and law. MatchlessWorks does not provide or license the music itself.
+
+  Users choose whether and where to share a run. They are responsible for reviewing shared content and selecting appropriate recipients. Tempo Run intentionally omits route coordinates from its generated share text, but users should still avoid adding sensitive location or personal information before sharing.
+
+  These Tempo Run provisions supplement the MatchlessWorks Terms of Use and Privacy Policy. If these app-specific privacy disclosures conflict with a general description, the more specific Tempo Run disclosure controls for Tempo Run's current features.`,
+    description: 'A cadence-matched running companion that builds personalized music playlists and tracks live run performance.'
   },
   {
     id: 'wordwell',
